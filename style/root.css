@@ -1,0 +1,29 @@
+:root {
+    --box-color: #0ff7;
+    --rotate-speed: 30s;
+    --bounce-speed: 2s;
+}
+
+body {
+    background-color: #000;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    perspective: 10em;
+    perspective-origin: 50% calc(50% - 2em);
+}
+
+.scene {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: sceneRotate var(--rotate-speed) infinite linear;
+}
+
+@keyframes sceneRotate {
+    to { 
+        transform: rotateY(360deg); 
+    }
+}
